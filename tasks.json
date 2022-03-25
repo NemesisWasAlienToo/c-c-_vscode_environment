@@ -1,0 +1,54 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build Debug",
+            "command": "make",
+            "args": [
+                "clean",
+                "all"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "type": "shell",
+            "label": "Build Test",
+            "command": "make",
+            "args": [
+                "clean",
+                "test"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "type": "shell",
+            "label": "Build View",
+            "command": "make",
+            "args": [
+                "clean",
+                "view",
+                "TARGET_FILE=${file}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        }
+    ],
+    "version": "2.0.0"
+}
