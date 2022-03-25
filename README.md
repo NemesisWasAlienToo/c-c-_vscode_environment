@@ -13,3 +13,61 @@ Makefile can be used in 3 ways:
 - launch The viewing cpp file
 
 you can basically select the mode in vscode by changing the selected launch task.
+
+you can use a simple script like bellow to create new project structure fast:
+
+```sh
+#!/bin/bash
+
+#Script to create new C/C++ File scheme project
+
+# Global Variable Initialization
+
+if [ "$#" -le 0 ]; then
+	echo "Please pass the name of your project"
+fi
+
+PROJECT=$1
+CD=$(pwd)
+MAKEFILE="Makefile"
+LAUNCH="launch.json"
+TASKS="tasks.json"
+
+echo "$CD/$1/"
+
+mkdir $PROJECT
+
+echo "	- $CS/Source"
+
+mkdir $PROJECT/Source/
+
+echo "	- $CS/Library"
+
+mkdir $PROJECT/Library/
+
+echo "	- $CS/Build"
+
+mkdir $PROJECT/Build/
+
+echo "	- $CS/Sample"
+
+mkdir $PROJECT/Sample/
+
+echo "	- $CS/Test"
+
+mkdir $PROJECT/Test/
+
+echo "	- $CS/Makefile"
+cp  $MAKEFILE $PROJECT/$MAKEFILE 
+
+echo "	- $CS/.vscode"
+mkdir $PROJECT/.vscode
+cp  $TASKS $PROJECT/.vscode/$TASKS
+cp  $LAUNCH $PROJECT/.vscode/$LAUNCH
+
+code $PROJECT
+exit
+
+
+
+```
