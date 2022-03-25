@@ -57,7 +57,7 @@ CC:=g++
 CPP_FLAGS:=-std=c++2a -g -Wall -c $(LIBRARIES)
 
 LINKER:=g++
-LINKER_FLAGS:=-no-pie -Wall -Wpedantic -pedantic -pthread -lssl -lcrypto
+LINKER_FLAGS:=-Wall -Wpedantic -pedantic -pthread
 
 RUN_ARGS:=
 TEST_ARGS:=

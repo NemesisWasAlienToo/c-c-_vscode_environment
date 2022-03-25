@@ -3,8 +3,9 @@
 Here are a Makefile and launch.json and tasks.json used to setup the build and run environment for vscode.
 
 ## How to user
-Copy the Makefile in the roo pf your project.
-Copy launch.json and tasks.json to .vscode folder of your project.
+- Copy the Makefile in the roo pf your project.
+- Copy launch.json and tasks.json to .vscode folder of your project.
+- Change flags, compiler, compiler or linker flags, etc to gain the desired compiling process in the Makefile
 
 ## Modes
 Makefile can be used in 3 ways:
